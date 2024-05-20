@@ -52,7 +52,7 @@ const Home = ({ imagesData, totalHits }) => {
   };
 
   return (
-    <Box maxWidth={1200} m="0 auto" sx={{ p: 1, pt: 4, bgcolor: "lightblue" }}>
+    <Box maxWidth={1200} m="0 auto" sx={{ p: 1, pt: 4 }}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Button
           sx={{ maxHeight: 50, minWidth: 80 }}
