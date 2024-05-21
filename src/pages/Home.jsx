@@ -85,9 +85,9 @@ const Home = ({ imagesData, totalHits }) => {
         </Button>
       </Box>
 
-      <Grid container maxHeight={1200} maxWidth="100%">
+      <Grid container>
         {dataFromServer.map((data) => (
-          <Grid item key={data.id} xs={4} sx={{ p: 4, maxWidth: 400 }}>
+          <Grid item key={data.id} xs={4} sx={{ p: 4 }}>
             <ImageItem
               downloads={data.downloads}
               likes={data.likes}

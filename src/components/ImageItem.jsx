@@ -25,7 +25,7 @@ const ImageItem = ({ url, views, likes, downloads, tags }) => {
     <Box>
       <img
         className="imageItem"
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        style={{ width: "100%" }}
         src={url}
         alt={tags}
         onClick={handleOpen}
