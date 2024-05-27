@@ -10,7 +10,6 @@ const modalStyle = {
   transform: "translate(-50%, -50%)",
   width: { sm: 400 },
   bgcolor: "background.paper",
-  border: "2px solid #000",
   borderRadius: "10px",
   boxShadow: 24,
   p: 4,
@@ -22,14 +21,8 @@ const ImageItem = ({ url, views, likes, downloads, tags }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box>
-      <img
-        className="imageItem"
-        style={{ width: "100%" }}
-        src={url}
-        alt={tags}
-        onClick={handleOpen}
-      />
+    <Box sx={{ width: "100%", height: "100%" }}>
+      <img className="imageItem" src={url} alt={tags} onClick={handleOpen} />
       <Modal
         open={open}
         onClose={handleClose}
@@ -38,27 +31,95 @@ const ImageItem = ({ url, views, likes, downloads, tags }) => {
       >
         <Box sx={modalStyle}>
           <Box sx={{ p: 1 }}>
-            <Typography variant="h4">
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 700,
+                fontSize: "1.5rem",
+              }}
+            >
               Views:
-              <Typography>{views}</Typography>
+            </Typography>
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 400,
+                fontSize: "1.2rem",
+                ml: 1.5,
+              }}
+            >
+              {views}
             </Typography>
           </Box>
           <Box sx={{ p: 1 }}>
-            <Typography variant="h4">
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 700,
+                fontSize: "1.5rem",
+              }}
+            >
               Likes:
-              <Typography>{likes}</Typography>
+            </Typography>
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 400,
+                fontSize: "1.2rem",
+                ml: 1.5,
+              }}
+            >
+              {likes}
             </Typography>
           </Box>
           <Box sx={{ p: 1 }}>
-            <Typography variant="h4">
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 700,
+                fontSize: "1.5rem",
+              }}
+            >
               Downloads:
-              <Typography>{downloads}</Typography>
+            </Typography>
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 400,
+                fontSize: "1.2rem",
+                ml: 1.5,
+              }}
+            >
+              {downloads}
             </Typography>
           </Box>
           <Box sx={{ p: 1 }}>
-            <Typography variant="h4">
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 700,
+                fontSize: "1.5rem",
+              }}
+            >
               Tags:
-              <Typography>{tags}</Typography>
+            </Typography>
+            <Typography
+              sx={{
+                display: "inline",
+                fontFamily: "Nunito",
+                fontWeight: 400,
+                fontSize: "1.2rem",
+                ml: 1.5,
+              }}
+            >
+              {tags}
             </Typography>
           </Box>
         </Box>

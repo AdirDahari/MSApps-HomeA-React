@@ -87,7 +87,12 @@ const Home = ({ imagesData, totalHits }) => {
 
       <Grid container>
         {dataFromServer.map((data) => (
-          <Grid item key={data.id} xs={4} sx={{ p: 4 }}>
+          <Grid
+            item
+            key={data.id}
+            xs={4}
+            sx={{ p: 2, width: "100%", height: 300 }}
+          >
             <ImageItem
               downloads={data.downloads}
               likes={data.likes}

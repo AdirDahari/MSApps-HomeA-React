@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { validateSearch } from "./validation/searchValidation";
 import axios from "axios";
 import Home from "./pages/Home";
+import "./style/app.css";
 
 function App() {
   const [dataFromServer, setDataFromServer] = useState(null);
